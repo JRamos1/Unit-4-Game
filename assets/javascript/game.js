@@ -30,11 +30,12 @@ var ResetGame = () => {
     crystal3 = Math.floor(Math.random() * 11) + 1;
     crystal4 = Math.floor(Math.random() * 11) + 1;
     totalScore = 0;
+    $("#totalScore").text(totalScore);
 }
 
 var win = () => {
     wins++;
-    $("#wins").text(wins);
+    $("#Wins").text(wins);
     alert("You win");
     
     
@@ -42,7 +43,7 @@ var win = () => {
 
 var lose = () => {
     losses++;
-    $("#losses").text(losses);
+    $("#Losses").text(losses);
     alert("You Lose");
     
 }
@@ -81,7 +82,6 @@ $("#crystal2").on("click",function(){
     $("#totalScore").text(totalScore);
 
     if(totalScore==scoreToMatch){
-    
         win();
         ResetGame();
         }
